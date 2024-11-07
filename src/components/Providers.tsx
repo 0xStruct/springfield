@@ -23,7 +23,7 @@ export default function Providers({ children }: Props) {
   const [currentNetwork, setCurrentNetwork] = useState("mainnet");
   const [web3Provider, setWeb3Provider] = useState<any | undefined>(undefined);
 
-  const initializeWalletClient = useCallback((account: any) => {
+  const initializeWalletClient = useCallback(() => {
     let network = null;
     switch (currentNetwork) {
       case "mainnet":
@@ -54,7 +54,7 @@ export default function Providers({ children }: Props) {
     // ethers.js
     // @ts-ignore
     const provider = new providers.Web3Provider(window.silk, network.id)
-    const signer = provider.getSigner(account)
+    const signer = provider.getSigner(userAddress)
 
     const newWeb3Provider = {
       getSigner: () => {
