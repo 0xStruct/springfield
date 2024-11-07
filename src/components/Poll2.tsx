@@ -2,6 +2,7 @@
 import { useWallet } from "./WalletContext";
 import Image from "next/image";
 
+// @ts-ignore
 export default function Poll2({doVote}) {
   const { currentNetwork, setCurrentNetwork, initializeWalletClient } = useWallet();
 
@@ -12,12 +13,12 @@ export default function Poll2({doVote}) {
       <h2 className="text-lg font-semibold mb-2">Poll #2 
         <a href={"https://testnet.snapshot.org/#/springfield.eth/proposal/"+ proposal} target="_blank" className="pl-4 text-sm text-blue-800 font-normal">[source]</a>
       </h2>
-      <p className="mb-2">
+      <div className="mb-2">
         <h3 className="text-lg">(Exit Poll) <b>POTS</b> - President of the Springfield</h3>
         <p className="py-2">
           <Image className="h-auto w-full drop-shadow-xl" src="/images/musk-or-swift.png" width="100" height="30" alt="springfield" />
         </p>
-      </p>
+      </div>
       <div className="flex flex-wrap justify-center gap-2">
         <button
           className="btn btn-secondary btn-sm rounded-full px-8"

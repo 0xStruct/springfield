@@ -2,6 +2,7 @@
 import { useWallet } from "./WalletContext";
 import Image from "next/image";
 
+// @ts-ignore
 export default function Poll1({ doVote }) {
   const { currentNetwork, setCurrentNetwork, initializeWalletClient } = useWallet();
 
