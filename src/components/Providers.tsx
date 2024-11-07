@@ -93,7 +93,7 @@ export default function Providers({ children }: Props) {
         if (accounts.length > 0) {
           setUserAddress(accounts[0]);
           setConnected(true);
-          initializeWalletClient(accounts[0]);
+          initializeWalletClient();
         } else {
           setConnected(false);
         }
